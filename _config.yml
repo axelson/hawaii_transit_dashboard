@@ -13,3 +13,4 @@ assets:
   - bower_components/jquery/dist/
   - bower_components/d3/
   - bower_components/c3/
+  - bower_components/underscore/
