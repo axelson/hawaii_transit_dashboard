@@ -1,0 +1,15 @@
+exclude:
+  - bower_components/
+assets:
+  js_compressor:  closure
+  css_compressor: sass
+  sources:
+  - _assets/images
+  - _assets/javascripts
+  - _assets/stylesheets
+  - bower_components/foundation/css/
+  - bower_components/foundation/js/
+  - bower_components/jquery/dist/
+  - bower_components/d3/
+  - bower_components/c3/
+  - bower_components/underscore/
