@@ -1,0 +1,23 @@
+{
+  "name": "Hawaii Transit Dashboard",
+  "version": "0.0.0",
+  "authors": [
+    "Jason Axelson <jason.axelson@gmail.com>"
+  ],
+  "description": "Display the current state of Hawaii transit metrics vs. goals and national metrics.",
+  "license": "Apache 2.0",
+  "homepage": "http://hawaiitransit.org",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.4.13",
+    "foundation": "~5.4.7",
+    "c3": "~0.4.4"
+  }
+}

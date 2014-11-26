@@ -1,0 +1,15 @@
+# Asset pipeline
+assets:
+  debug: true
+  cache: true
+  cachebust: none
+  gzip: false
+  sources:
+  - _assets/images
+  - _assets/javascripts
+  - _assets/stylesheets
+  - bower_components/foundation/css/
+  - bower_components/foundation/js/
+  - bower_components/jquery/dist/
+  - bower_components/d3/
+  - bower_components/c3/
