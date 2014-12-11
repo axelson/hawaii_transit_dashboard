@@ -2,19 +2,35 @@
 layout: default
 ---
 
-%h2 Cars vs People
 .row
   .large-12.columns
+    %h2 Cars vs People
     .visualization.car-vs-people
-
-%h2 Vehicle miles vs fuel consumption
-.row
-  .large-12.columns
-    .visualization.vehicle-miles
-
-.row
-  .large-12.columns
-    %h1 We're trying to get the following assets
+    Source Data:
     %ul
-      %li Total Bike Lanes
+      %li
+        %a{href: 'https://data.hawaii.gov/Economic-Development/Table-18-07-MOTOR-VEHICLES-REGISTERED-BY-COUNTY-19/jbez-8d6q?', target: '_blank'} Motor Vehicles Registered by county
+      %li
+        %a{href: 'https://data.hawaii.gov/Government-Wide-Support/Table-1-06-RESIDENT-POPULATION-BY-COUNTY-2000-TO-2/hnpb-2rfi?', target: '_blank'} Resident Population by county
+
+.row
+  .large-12.columns
+    %h2 Vehicle miles vs fuel consumption
+    .visualization.vehicle-miles
+    Source Data:
+    %ul
+      %li
+        %a{href: 'http://files.hawaii.gov/dbedt/economic/databook/Data_Book_time_series/sec18update.xls', target: '_blank'} DBEDT Data Book Transportation (section 18)
+
+.row
+  .large-12.columns
+    %h1 We're trying to get the following data
+    %ul
+      %li
+        Total Bike Lanes
+        %ul
+          %li
+            %a{href: 'https://data.hawaii.gov/nominate/4403', target: '_blank'} data.hawaii.gov
+          %li
+            %a{href: 'https://data.honolulu.gov/nominate/4402', target: '_blank'} data.honolulu.gov (No response yet)
       %li Longest distance you can travel on bike lanes

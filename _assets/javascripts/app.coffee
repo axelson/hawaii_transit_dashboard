@@ -18,7 +18,12 @@ $ ->
           vehicle_miles: 'y'
           fuel_consumption: 'y2'
       axis:
+        x:
+          label: 'Year'
+        y:
+          label: 'Fuel Consumption (1,000 gallons)'
         y2:
+          label: 'Vehicle miles of travel (millions)'
           show: true
 
 
@@ -38,14 +43,16 @@ $ ->
 
     chart = c3.generate
       bindto: '.visualization.car-vs-people'
-      data: {
+      data:
         x: 'years'
         columns: [
           ['vehicles'].concat(vehiclesPerYear)
           ['population'].concat(populationPerYear)
           ['years'].concat(years)
         ]
-      }
+      axis:
+        x: label: 'Year'
+        y: label: 'Number cars or People'
 
 
 class LocalData
