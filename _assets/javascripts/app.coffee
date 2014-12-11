@@ -4,6 +4,24 @@ $ ->
   hawaiiData = new SocrataData('hawaii')
   vehicleRequest = hawaiiData.get_dataset 'jbez-8d6q'
   populationRequest = hawaiiData.get_dataset 'hnpb-2rfi'
+  localData = new LocalData()
+  localData.get_dataset 'transportation_stats', (transportationData) ->
+    #transportationData.forEach (d) -> d.
+    chart = c3.generate
+      bindto: '.visualization.vehicle-miles'
+      data:
+        json: transportationData
+        keys:
+          x: 'year'
+          value: ['vehicle_miles', 'fuel_consumption']
+        axes:
+          vehicle_miles: 'y'
+          fuel_consumption: 'y2'
+      axis:
+        y2:
+          show: true
+
+
   $.when( vehicleRequest, populationRequest ).done (vehiclesResponse, populationResponse) ->
     vehicles = vehiclesResponse[0]
     population = populationResponse[0]
@@ -28,6 +46,14 @@ $ ->
           ['years'].concat(years)
         ]
       }
+
+
+class LocalData
+  constructor: ->
+
+  get_dataset: (dataset_name, callback) ->
+    url = "/data/#{dataset_name}.csv"
+    d3.csv url, callback
 
 class SocrataData
   constructor: (site) ->
